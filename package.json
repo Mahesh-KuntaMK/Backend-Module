@@ -1,0 +1,17 @@
+{
+  "name": "backend-module",
+  "version": "1.0.0",
+  "description": "learing npm scripts",
+  "main": "first-app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon firstapp.js",
+    "start-server": "node firstapp.js"
+  },
+  "author": "mahesh kunta",
+  "license": "ISC",
+  "dependencies": {
+    "nodeman": "^1.1.2",
+    "nodemon": "^3.0.1"
+  }
+}
