@@ -12,6 +12,7 @@ const  app=express();
 const adminRoutes=require('./routes/admin');
 const shopRoutes=require('./routes/shop');
 const contactusroutes=require('./routes/contact.js')
+const pagenotfound=require('./controllers/product.js');
 
 app.use(bodyParser.urlencoded({extended:false}));
 
@@ -24,9 +25,7 @@ app.use(shopRoutes);
 app.use(contactusroutes);
 
 app.use(express.static(path.join(__dirname,'public')))
-app.use((req,res,next)=>{
-    res.status(404).sendFile(path.join(__dirname,'views','404.html'))
-})
+app.use(pagenotfound.pagenotfound);
 
 
 app.listen(3000);
